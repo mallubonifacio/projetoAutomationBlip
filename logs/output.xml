@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-26T11:59:20.685128" rpa="false" schemaversion="5">
+<suite id="s1" name="bank Transfer" source="C:\Users\Mallu\Documents\Projetos\Blip\projeto_automation_blip\tests\bank_Transfer.robot">
+<test id="s1-t1" name="Acessar o site do banco" line="19">
+<kw name="Open Site" owner="Commons" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:21.994592" level="INFO">Opening browser 'chrome' to base url 'http://demo.testfire.net/bank/transfer.jsp'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=http://demo.testfire.net/bank/transfer.jsp</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-26T11:59:21.994592" elapsed="4.546809"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:21.992594" elapsed="4.548807"/>
+</kw>
+<kw name="Dado que o usuário acesse o site do banco AltoroMutual" owner="loginActions">
+<kw name="Site Access" owner="loginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BANK_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.541401" elapsed="0.063255"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.541401" elapsed="0.063255"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.541401" elapsed="0.063255"/>
+</kw>
+<kw name="Quando acessar a Home" owner="loginActions">
+<kw name="Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Online Banking Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.604656" elapsed="0.016920"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.604656" elapsed="0.016920"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.604656" elapsed="0.016920"/>
+</kw>
+<kw name="Então deverá visualizar os campos solicitando os dados de login" owner="loginActions">
+<kw name="Username and password validation" owner="loginPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.621576" elapsed="0.051866"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:26.674443" level="INFO">Clicking element '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.674443" elapsed="0.080918"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:26.621576" elapsed="0.133785"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.756357" elapsed="0.024985"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:26.782343" level="INFO">Clicking element '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.782343" elapsed="0.052260"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:26.755361" elapsed="0.079242"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.621576" elapsed="0.213027"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.621576" elapsed="0.213027"/>
+</kw>
+<kw name="Close Site" owner="Commons" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-26T11:59:26.838397" elapsed="2.358791"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:29.197188" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-26T11:59:29.197188" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:26.837390" elapsed="2.359798"/>
+</kw>
+<doc>Este teste valida o acesso com sucesso ao site do banco e visualização
+da home de login</doc>
+<tag>login</tag>
+<status status="PASS" start="2024-01-26T11:59:21.991594" elapsed="7.206596"/>
+</test>
+<test id="s1-t2" name="Login com sucesso" line="27">
+<kw name="Open Site" owner="Commons" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:29.200302" level="INFO">Opening browser 'chrome' to base url 'http://demo.testfire.net/bank/transfer.jsp'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=http://demo.testfire.net/bank/transfer.jsp</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-26T11:59:29.200302" elapsed="3.515148"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:29.200302" elapsed="3.515148"/>
+</kw>
+<kw name="Dado que o usuário acesse o site do banco AltoroMutual" owner="loginActions">
+<kw name="Site Access" owner="loginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BANK_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:32.715450" elapsed="0.064419"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:32.715450" elapsed="0.064419"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:32.715450" elapsed="0.076767"/>
+</kw>
+<kw name="Quando acessar a Home" owner="loginActions">
+<kw name="Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Online Banking Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:32.795665" elapsed="0.019263"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:32.795665" elapsed="0.019263"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:32.795665" elapsed="0.019263"/>
+</kw>
+<kw name="E visualizar os campos solicitando os dados de login" owner="loginActions">
+<kw name="Username and password validation" owner="loginPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:32.816925" elapsed="0.038303"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:32.856229" level="INFO">Clicking element '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:32.855228" elapsed="0.073502"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:32.816925" elapsed="0.111805"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:32.928730" elapsed="0.031561"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:32.960291" level="INFO">Clicking element '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:32.960291" elapsed="0.058823"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:32.928730" elapsed="0.090384"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:32.815926" elapsed="0.203188"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:32.815926" elapsed="0.204189"/>
+</kw>
+<kw name="E adicionar suas credenciais de Usuário e Senha" owner="loginActions">
+<kw name="Input login data" owner="loginPage">
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.025116" elapsed="0.026074"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:33.052210" level="INFO">Typing text 'jsmith' into text field '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.052210" elapsed="0.128104"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<arg>${MASS.username}</arg>
+<status status="PASS" start="2024-01-26T11:59:33.023115" elapsed="0.157199"/>
+</kw>
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.180314" elapsed="0.025429"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:33.206743" level="INFO">Typing text 'Demo1234' into text field '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.206743" elapsed="0.106951"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<arg>${MASS.password}</arg>
+<status status="PASS" start="2024-01-26T11:59:33.180314" elapsed="0.133380"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:33.022117" elapsed="0.291577"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.313694" elapsed="0.027338"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:33.342051" level="INFO">Clicking element '//input[contains(@name,'btnSubmit')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.341032" elapsed="0.432920"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-01-26T11:59:33.313694" elapsed="0.461260"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:33.021114" elapsed="0.753840"/>
+</kw>
+<kw name="Então deverá ser redirecionado para a home da conta" owner="loginActions">
+<kw name="Account Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Hello John Smith</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.778302" elapsed="0.027736"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to Altoro Mutual Online</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.806038" elapsed="0.024040"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:33.776711" elapsed="0.054114"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:33.775951" elapsed="0.054874"/>
+</kw>
+<kw name="Close Site" owner="Commons" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-26T11:59:33.830825" elapsed="2.322650"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:36.153475" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-26T11:59:36.153475" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:33.830825" elapsed="2.322650"/>
+</kw>
+<doc>Este teste valida o login com sucesso ao site do banco e visualização
+da home da conta do usuário</doc>
+<tag>login</tag>
+<status status="PASS" start="2024-01-26T11:59:29.199192" elapsed="6.954283"/>
+</test>
+<test id="s1-t3" name="Realizar 3 transações aleatórias" line="37">
+<kw name="Open Site" owner="Commons" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:36.153475" level="INFO">Opening browser 'chrome' to base url 'http://demo.testfire.net/bank/transfer.jsp'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=http://demo.testfire.net/bank/transfer.jsp</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-26T11:59:36.153475" elapsed="3.366276"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:36.153475" elapsed="3.366276"/>
+</kw>
+<kw name="Dado que o usuário esteja logado" owner="transferActions">
+<kw name="Login with success" owner="loginActions">
+<kw name="Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Online Banking Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.524075" elapsed="0.035547"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:39.523076" elapsed="0.036546"/>
+</kw>
+<kw name="Username and password validation" owner="loginPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.560621" elapsed="0.024218"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:39.584839" level="INFO">Clicking element '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.584839" elapsed="0.082670"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:39.560621" elapsed="0.106888"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.668510" elapsed="0.015112"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:39.683622" level="INFO">Clicking element '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.683622" elapsed="0.067478"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:39.668510" elapsed="0.082590"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:39.559622" elapsed="0.191478"/>
+</kw>
+<kw name="Input login data" owner="loginPage">
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.751100" elapsed="0.024874"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:39.776974" level="INFO">Typing text 'jsmith' into text field '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.776974" elapsed="0.111671"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<arg>${MASS.username}</arg>
+<status status="PASS" start="2024-01-26T11:59:39.751100" elapsed="0.137545"/>
+</kw>
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.888645" elapsed="0.022886"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:39.911531" level="INFO">Typing text 'Demo1234' into text field '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:39.911531" elapsed="0.102202"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<arg>${MASS.password}</arg>
+<status status="PASS" start="2024-01-26T11:59:39.888645" elapsed="0.125088"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:39.751100" elapsed="0.262633"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.013733" elapsed="0.026042"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:40.039775" level="INFO">Clicking element '//input[contains(@name,'btnSubmit')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.039775" elapsed="0.413807"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-01-26T11:59:40.013733" elapsed="0.439849"/>
+</kw>
+<kw name="Account Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Hello John Smith</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.454581" elapsed="0.024346"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to Altoro Mutual Online</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.479927" elapsed="0.016156"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:40.453582" elapsed="0.042501"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:39.522076" elapsed="0.974007"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:39.521456" elapsed="0.974627"/>
+</kw>
+<kw name="Quando acessar a opção &quot;Transfer Funds&quot;" owner="transferActions">
+<kw name="Transfer option" owner="transferPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.498062" elapsed="0.028241"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:40.527303" level="INFO">Clicking element '//a[contains(.,'Transfer Funds')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.527303" elapsed="0.260472"/>
+</kw>
+<arg>${TRANFER_OPTION}</arg>
+<status status="PASS" start="2024-01-26T11:59:40.497077" elapsed="0.290698"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Transfer Funds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.787775" elapsed="0.026945"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:40.497077" elapsed="0.317643"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:40.497077" elapsed="0.317643"/>
+</kw>
+<kw name="E realizar 3 transferencias de valores aleatórios" owner="transferActions">
+<kw name="Efetuar Transferência" owner="transferPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:40.819097" level="INFO">${AMOUTFAKE} = 955289824</msg>
+<var>${AMOUTFAKE}</var>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:40.819097" elapsed="0.000000"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.820094" elapsed="0.032781"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:40.852875" level="INFO">Clicking element '//select[contains(@name,'toAccount')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.852875" elapsed="0.085684"/>
+</kw>
+<arg>${CHECKBOX_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:40.820094" elapsed="0.118465"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.942303" elapsed="0.032987"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:40.976290" level="INFO">Clicking element '(//option[@value='800003'][contains(.,'800003 Checking')])[2]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:40.976290" elapsed="0.043767"/>
+</kw>
+<arg>${OPTION_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:40.940163" elapsed="0.079894"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:41.021058" level="INFO">Typing text '955289824' into text field '//input[contains(@name,'transferAmount')]'.</msg>
+<arg>${IMPUT_AMOUNT}</arg>
+<arg>${AMOUTFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.020057" elapsed="0.124028"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:41.145088" level="INFO">Clicking button '//input[@name='transfer']'.</msg>
+<arg>${TRNSFER_MONEY_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.145088" elapsed="0.247536"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:40.816723" elapsed="0.576765"/>
+</kw>
+<kw name="Realizar Transações de Transferência" owner="transferPage">
+<kw name="Repeat Keyword" owner="BuiltIn">
+<msg time="2024-01-26T11:59:41.394954" level="INFO">Repeating keyword, round 1/3.</msg>
+<kw name="Efetuar Transferência" owner="transferPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:41.396899" level="INFO">${AMOUTFAKE} = 4</msg>
+<var>${AMOUTFAKE}</var>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:41.396899" elapsed="0.000000"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.397904" elapsed="0.057217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:41.455121" level="INFO">Clicking element '//select[contains(@name,'toAccount')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.455121" elapsed="0.069644"/>
+</kw>
+<arg>${CHECKBOX_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:41.397904" elapsed="0.128554"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.528319" elapsed="0.026228"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:41.554547" level="INFO">Clicking element '(//option[@value='800003'][contains(.,'800003 Checking')])[2]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.554547" elapsed="0.034863"/>
+</kw>
+<arg>${OPTION_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:41.527773" elapsed="0.061637"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:41.589410" level="INFO">Typing text '4' into text field '//input[contains(@name,'transferAmount')]'.</msg>
+<arg>${IMPUT_AMOUNT}</arg>
+<arg>${AMOUTFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.589410" elapsed="0.115004"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:41.704414" level="INFO">Clicking button '//input[@name='transfer']'.</msg>
+<arg>${TRNSFER_MONEY_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.704414" elapsed="0.260778"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:41.394954" elapsed="0.570238"/>
+</kw>
+<msg time="2024-01-26T11:59:41.965192" level="INFO">Repeating keyword, round 2/3.</msg>
+<kw name="Efetuar Transferência" owner="transferPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:41.969852" level="INFO">${AMOUTFAKE} = 2057</msg>
+<var>${AMOUTFAKE}</var>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:41.968095" elapsed="0.001757"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.970852" elapsed="0.032420"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.004277" level="INFO">Clicking element '//select[contains(@name,'toAccount')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.004277" elapsed="0.057366"/>
+</kw>
+<arg>${CHECKBOX_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:41.970852" elapsed="0.090791"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.072485" elapsed="0.022248"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.095730" level="INFO">Clicking element '(//option[@value='800003'][contains(.,'800003 Checking')])[2]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.095730" elapsed="0.030044"/>
+</kw>
+<arg>${OPTION_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:42.070664" elapsed="0.055110"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.125774" level="INFO">Typing text '2057' into text field '//input[contains(@name,'transferAmount')]'.</msg>
+<arg>${IMPUT_AMOUNT}</arg>
+<arg>${AMOUTFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.125774" elapsed="0.103104"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.228878" level="INFO">Clicking button '//input[@name='transfer']'.</msg>
+<arg>${TRNSFER_MONEY_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.228878" elapsed="0.242805"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:41.965192" elapsed="0.506491"/>
+</kw>
+<msg time="2024-01-26T11:59:42.472683" level="INFO">Repeating keyword, round 3/3.</msg>
+<kw name="Efetuar Transferência" owner="transferPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:42.473679" level="INFO">${AMOUTFAKE} = 9</msg>
+<var>${AMOUTFAKE}</var>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:42.473679" elapsed="0.000000"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.475679" elapsed="0.044202"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.520880" level="INFO">Clicking element '//select[contains(@name,'toAccount')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.519881" elapsed="0.070627"/>
+</kw>
+<arg>${CHECKBOX_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:42.474678" elapsed="0.115830"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.593006" elapsed="0.026170"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.620175" level="INFO">Clicking element '(//option[@value='800003'][contains(.,'800003 Checking')])[2]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.620175" elapsed="0.034390"/>
+</kw>
+<arg>${OPTION_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:42.591991" elapsed="0.062574"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.654565" level="INFO">Typing text '9' into text field '//input[contains(@name,'transferAmount')]'.</msg>
+<arg>${IMPUT_AMOUNT}</arg>
+<arg>${AMOUTFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.654565" elapsed="0.105461"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:42.760026" level="INFO">Clicking button '//input[@name='transfer']'.</msg>
+<arg>${TRNSFER_MONEY_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:42.760026" elapsed="0.262242"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:42.472683" elapsed="0.549585"/>
+</kw>
+<arg>3</arg>
+<arg>Efetuar Transferência</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<status status="PASS" start="2024-01-26T11:59:41.394653" elapsed="1.627615"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:41.393488" elapsed="1.629780"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:40.815730" elapsed="2.207538"/>
+</kw>
+<kw name="Então deverá ser exibida mensagem informando que a transferencia foi realizada com sucesso" owner="transferActions">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>successfully transferred</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:43.025267" elapsed="0.053733"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:43.024268" elapsed="0.054732"/>
+</kw>
+<kw name="Close Site" owner="Commons" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-26T11:59:43.080607" elapsed="2.338643"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:45.419250" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-26T11:59:45.419250" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:43.079601" elapsed="2.339649"/>
+</kw>
+<doc>Este teste valida a realização de 3 transferencias com valores aleatórios com
+sucesso</doc>
+<tag>transferencia</tag>
+<status status="PASS" start="2024-01-26T11:59:36.153475" elapsed="9.265775"/>
+</test>
+<test id="s1-t4" name="Validar as transações recentes" line="46">
+<kw name="Open Site" owner="Commons" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:45.419250" level="INFO">Opening browser 'chrome' to base url 'http://demo.testfire.net/bank/transfer.jsp'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=http://demo.testfire.net/bank/transfer.jsp</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-26T11:59:45.419250" elapsed="3.521186"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:45.419250" elapsed="3.522187"/>
+</kw>
+<kw name="Dado que o usuário esteja logado" owner="transferActions">
+<kw name="Login with success" owner="loginActions">
+<kw name="Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Online Banking Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:48.947432" elapsed="0.038978"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:48.946432" elapsed="0.039978"/>
+</kw>
+<kw name="Username and password validation" owner="loginPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:48.987366" elapsed="0.042551"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:49.030915" level="INFO">Clicking element '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.029917" elapsed="0.071464"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:48.987366" elapsed="0.114015"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.101381" elapsed="0.025217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:49.126598" level="INFO">Clicking element '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.126598" elapsed="0.060139"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<status status="PASS" start="2024-01-26T11:59:49.101381" elapsed="0.085356"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:48.987366" elapsed="0.199371"/>
+</kw>
+<kw name="Input login data" owner="loginPage">
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.186737" elapsed="0.026292"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:49.214029" level="INFO">Typing text 'jsmith' into text field '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.214029" elapsed="0.114455"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<arg>${MASS.username}</arg>
+<status status="PASS" start="2024-01-26T11:59:49.186737" elapsed="0.141747"/>
+</kw>
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.329484" elapsed="0.022774"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:49.352258" level="INFO">Typing text 'Demo1234' into text field '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.352258" elapsed="0.098037"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<arg>${MASS.password}</arg>
+<status status="PASS" start="2024-01-26T11:59:49.328484" elapsed="0.121811"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:49.186737" elapsed="0.263558"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.450295" elapsed="0.027398"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:49.477693" level="INFO">Clicking element '//input[contains(@name,'btnSubmit')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.477693" elapsed="0.392685"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-01-26T11:59:49.450295" elapsed="0.420083"/>
+</kw>
+<kw name="Account Home validation" owner="loginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Hello John Smith</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.871602" elapsed="0.062721"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome to Altoro Mutual Online</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.934323" elapsed="0.016986"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:49.870378" elapsed="0.080931"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:48.945433" elapsed="1.005876"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:48.944434" elapsed="1.006875"/>
+</kw>
+<kw name="Quando acessar a opção &quot;View Recent Transactions&quot;" owner="validationActions">
+<kw name="Recent Transactions Page Validation" owner="validationPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.953288" elapsed="0.035702"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:49.988990" level="INFO">Clicking element '//a[contains(.,'View Recent Transactions')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:49.988990" elapsed="0.279218"/>
+</kw>
+<arg>${VIEW_TRANSACTIONS_BTN}</arg>
+<status status="PASS" start="2024-01-26T11:59:49.953288" elapsed="0.315920"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Recent Transactions</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.269208" elapsed="0.033564"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:49.953288" elapsed="0.350498"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:49.952289" elapsed="0.351497"/>
+</kw>
+<kw name="Então deverá visualizar as 3 últimas transações realizadas" owner="validationActions">
+<kw name="Validate Last Transactions" owner="validationPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:50.305784" level="INFO">Clicking link 'View Recent Transactions'.</msg>
+<arg>View Recent Transactions</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.305784" elapsed="0.279968"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:50.605532" level="INFO">${transaction_ids} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="dca58b2cc1e46d0a3f67260fc59851f9", element="045DE5A13E8174466066C7008F8FF23B_element_63")&gt;]</msg>
+<var>${transaction_ids}</var>
+<arg>xpath=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/div[1]/form[1]/table[2]/tbody[1]/tr[2]/td[1]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.586752" elapsed="0.018780"/>
+</kw>
+<kw name="Get Slice From List" owner="Collections">
+<msg time="2024-01-26T11:59:50.605532" level="INFO">${last_3_ids} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="dca58b2cc1e46d0a3f67260fc59851f9", element="045DE5A13E8174466066C7008F8FF23B_element_63")&gt;]</msg>
+<var>${last_3_ids}</var>
+<arg>${transaction_ids}</arg>
+<arg>-3</arg>
+<doc>Returns a slice of the given list between ``start`` and ``end`` indexes.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.605532" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-01-26T11:59:50.606530" level="INFO">${last_3_ids} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="dca58b2cc1e46d0a3f67260fc59851f9", element="045DE5A13E8174466066C7008F8FF23B_element_63")&gt;]</msg>
+<arg>${last_3_ids}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.606530" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:50.304764" elapsed="0.301766"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:50.744775" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.606530" elapsed="0.138245"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:50.304764" elapsed="0.440011"/>
+</kw>
+<kw name="Close Site" owner="Commons" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-26T11:59:50.744775" elapsed="2.362274"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:53.107049" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-26T11:59:53.107049" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:50.744775" elapsed="2.362274"/>
+</kw>
+<doc>Este teste valida que as ultimas transações realizadas foram relacionadas a
+lista de "Transações recentes"</doc>
+<tag>validação</tag>
+<status status="PASS" start="2024-01-26T11:59:45.419250" elapsed="7.687799"/>
+</test>
+<test id="s1-t5" name="Armazenar os dados transacionais em um arquivo JSON" line="54">
+<kw name="Open Site" owner="Commons" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:53.107049" level="INFO">Opening browser 'chrome' to base url 'http://demo.testfire.net/bank/transfer.jsp'.</msg>
+<arg>browser=chrome</arg>
+<arg>url=http://demo.testfire.net/bank/transfer.jsp</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-26T11:59:53.107049" elapsed="3.553100"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:53.107049" elapsed="3.558964"/>
+</kw>
+<kw name="Dado que o usuário esteja logado e seja realizada uma nova transação" owner="jsonActions">
+<kw name="Input login data" owner="loginPage">
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:56.674105" elapsed="0.062128"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:56.736233" level="INFO">Typing text 'jsmith' into text field '//input[contains(@name,'uid')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:56.736233" elapsed="0.113417"/>
+</kw>
+<arg>${USERNAME_SPACE}</arg>
+<arg>${MASS.username}</arg>
+<status status="PASS" start="2024-01-26T11:59:56.672106" elapsed="0.178545"/>
+</kw>
+<kw name="Check Element and Input" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:56.852425" elapsed="0.031792"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:56.884217" level="INFO">Typing text 'Demo1234' into text field '//input[contains(@type,'password')]'.</msg>
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:56.884217" elapsed="0.124426"/>
+</kw>
+<arg>${PASSWORD_SPACE}</arg>
+<arg>${MASS.password}</arg>
+<status status="PASS" start="2024-01-26T11:59:56.851422" elapsed="0.158223"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:56.671106" elapsed="0.338539"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.010665" elapsed="0.026914"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:57.038577" level="INFO">Clicking element '//input[contains(@name,'btnSubmit')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.037579" elapsed="0.421663"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-01-26T11:59:57.009645" elapsed="0.449597"/>
+</kw>
+<kw name="Transfer option" owner="transferPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.460245" elapsed="0.038822"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:57.501797" level="INFO">Clicking element '//a[contains(.,'Transfer Funds')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.501511" elapsed="0.252467"/>
+</kw>
+<arg>${TRANFER_OPTION}</arg>
+<status status="PASS" start="2024-01-26T11:59:57.460245" elapsed="0.293733"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Transfer Funds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.755822" elapsed="0.026645"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:57.459242" elapsed="0.323225"/>
+</kw>
+<kw name="Efetuar Transferência" owner="transferPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:57.783465" level="INFO">${AMOUTFAKE} = 71020</msg>
+<var>${AMOUTFAKE}</var>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:57.783465" elapsed="0.000000"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.787381" elapsed="0.013654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:57.816660" level="INFO">Clicking element '//select[contains(@name,'toAccount')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.801035" elapsed="0.089929"/>
+</kw>
+<arg>${CHECKBOX_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:57.785387" elapsed="0.105577"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.893893" elapsed="0.033820"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:57.927713" level="INFO">Clicking element '(//option[@value='800003'][contains(.,'800003 Checking')])[2]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.927713" elapsed="0.041227"/>
+</kw>
+<arg>${OPTION_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:57.892895" elapsed="0.076045"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:57.968940" level="INFO">Typing text '71020' into text field '//input[contains(@name,'transferAmount')]'.</msg>
+<arg>${IMPUT_AMOUNT}</arg>
+<arg>${AMOUTFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:57.968940" elapsed="0.128379"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:58.098342" level="INFO">Clicking button '//input[@name='transfer']'.</msg>
+<arg>${TRNSFER_MONEY_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.097319" elapsed="0.253243"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:57.782467" elapsed="0.568095"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:56.668010" elapsed="1.683477"/>
+</kw>
+<kw name="Quando os dados da transação estiverem visiveis na opção &quot;View Recent Transactions&quot;" owner="jsonActions">
+<kw name="Recent Transactions Page Validation" owner="validationPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.355487" elapsed="0.081857"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:58.438370" level="INFO">Clicking element '//a[contains(.,'View Recent Transactions')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.437344" elapsed="0.287411"/>
+</kw>
+<arg>${VIEW_TRANSACTIONS_BTN}</arg>
+<status status="PASS" start="2024-01-26T11:59:58.354486" elapsed="0.370269"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Recent Transactions</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.725759" elapsed="0.025044"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:58.353487" elapsed="0.397316"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:58.352488" elapsed="0.399306"/>
+</kw>
+<kw name="Então deveremos armazenar 'Transaction ID', 'Transaction Time' e 'Amount' em um arquivo JSON" owner="jsonActions">
+<kw name="Add Object Into Json File" owner="jsonPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:58.756796" level="INFO">${DICTID} = 5</msg>
+<var>${DICTID}</var>
+<arg>digits=1</arg>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:58.755795" elapsed="0.001001"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:58.801783" level="INFO">${transactionId} = 7322</msg>
+<var>${transactionId}</var>
+<arg>xpath://table[@id = '_ctl0__ctl0_Content_Main_MyTransactions']/tbody/tr[2]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.756796" elapsed="0.045987"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:58.820840" level="INFO">${transactionTime} = 2024-01-26 08:59</msg>
+<var>${transactionTime}</var>
+<arg>xpath://table[@id = '_ctl0__ctl0_Content_Main_MyTransactions']/tbody/tr[2]/td[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.803789" elapsed="0.017051"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:58.862356" level="INFO">${amount} = $71020.00</msg>
+<var>${amount}</var>
+<arg>xpath://table[@id = '_ctl0__ctl0_Content_Main_MyTransactions']/tbody/tr[2]/td[5]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.820840" elapsed="0.041516"/>
+</kw>
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-01-26T11:59:58.873349" level="INFO">${File} = {'Transaction8': {'transactionID': '7304', 'transaction_time': '2024-01-26 08:28', 'amount': '$8.00'}}</msg>
+<var>${File}</var>
+<arg>C:\\Users\\Mallu\\Documents\\Projetos\\Blip\\projeto_automation_blip\\json${/}newtransactiondata.Json</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.862356" elapsed="0.010993"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-01-26T11:59:58.874350" level="INFO">${dict} = {'transactionID': '7322', 'transaction_time': '2024-01-26 08:59', 'amount': '$71020.00'}</msg>
+<var>${dict}</var>
+<arg>transactionID=${transactionId}</arg>
+<arg>transaction_time=${transactionTime}</arg>
+<arg>amount=${amount}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.874350" elapsed="0.000000"/>
+</kw>
+<kw name="Add Object To Json" owner="JSONLibrary">
+<msg time="2024-01-26T11:59:58.919413" level="INFO">${json} = {'Transaction8': {'transactionID': '7304', 'transaction_time': '2024-01-26 08:28', 'amount': '$8.00'}, 'Transaction5': {'transactionID': '7322', 'transaction_time': '2024-01-26 08:59', 'amount': '$710...</msg>
+<var>${json}</var>
+<arg>${File}</arg>
+<arg>$.Transaction${DICTID}</arg>
+<arg>${dict}</arg>
+<doc>Add an dictionary or list object to json object using json_path</doc>
+<status status="PASS" start="2024-01-26T11:59:58.874350" elapsed="0.045063"/>
+</kw>
+<kw name="Dump Json To File" owner="JSONLibrary">
+<arg>C:\\Users\\Mallu\\Documents\\Projetos\\Blip\\projeto_automation_blip\\json${/}newtransactiondata.Json</arg>
+<arg>${json}</arg>
+<doc>Dump JSON to file</doc>
+<status status="PASS" start="2024-01-26T11:59:58.919413" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:58.755795" elapsed="0.163618"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:58.752793" elapsed="0.166620"/>
+</kw>
+<kw name="E validar que o armazenamento ocorra para cada nova transação" owner="jsonActions">
+<kw name="Transfer option" owner="transferPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.919413" elapsed="0.035882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:58.955295" level="INFO">Clicking element '//a[contains(.,'Transfer Funds')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:58.955295" elapsed="0.274631"/>
+</kw>
+<arg>${TRANFER_OPTION}</arg>
+<status status="PASS" start="2024-01-26T11:59:58.919413" elapsed="0.310992"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Transfer Funds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.230405" elapsed="0.015670"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:58.919413" elapsed="0.326662"/>
+</kw>
+<kw name="Repeat Keyword" owner="BuiltIn">
+<msg time="2024-01-26T11:59:59.246075" level="INFO">Repeating keyword, round 1/1.</msg>
+<kw name="Efetuar Transferência" owner="transferPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T11:59:59.247074" level="INFO">${AMOUTFAKE} = 6715689</msg>
+<var>${AMOUTFAKE}</var>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T11:59:59.247074" elapsed="0.000000"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.248073" elapsed="0.026312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:59.275407" level="INFO">Clicking element '//select[contains(@name,'toAccount')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.275407" elapsed="0.067618"/>
+</kw>
+<arg>${CHECKBOX_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:59.248073" elapsed="0.096949"/>
+</kw>
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.347435" elapsed="0.027321"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:59.375756" level="INFO">Clicking element '(//option[@value='800003'][contains(.,'800003 Checking')])[2]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.374756" elapsed="0.036254"/>
+</kw>
+<arg>${OPTION_TO_ACCOUNT}</arg>
+<status status="PASS" start="2024-01-26T11:59:59.345022" elapsed="0.065988"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:59.411010" level="INFO">Typing text '6715689' into text field '//input[contains(@name,'transferAmount')]'.</msg>
+<arg>${IMPUT_AMOUNT}</arg>
+<arg>${AMOUTFAKE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.411010" elapsed="0.117712"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:59.528722" level="INFO">Clicking button '//input[@name='transfer']'.</msg>
+<arg>${TRNSFER_MONEY_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.528722" elapsed="0.323462"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:59.247074" elapsed="0.605110"/>
+</kw>
+<arg>1</arg>
+<arg>Efetuar Transferência</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.246075" elapsed="0.607251"/>
+</kw>
+<kw name="Repeat Keyword" owner="BuiltIn">
+<msg time="2024-01-26T11:59:59.854327" level="INFO">Repeating keyword, round 1/1.</msg>
+<kw name="Recent Transactions Page Validation" owner="validationPage">
+<kw name="Check Element and Click" owner="Commons">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.857326" elapsed="0.047815"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-26T11:59:59.905141" level="INFO">Clicking element '//a[contains(.,'View Recent Transactions')]'.</msg>
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.905141" elapsed="0.281406"/>
+</kw>
+<arg>${VIEW_TRANSACTIONS_BTN}</arg>
+<status status="PASS" start="2024-01-26T11:59:59.856325" elapsed="0.330222"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Recent Transactions</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.187547" elapsed="0.021669"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:59.855326" elapsed="0.353890"/>
+</kw>
+<arg>1</arg>
+<arg>Recent Transactions Page Validation</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<status status="PASS" start="2024-01-26T11:59:59.854327" elapsed="0.354889"/>
+</kw>
+<kw name="Repeat Keyword" owner="BuiltIn">
+<msg time="2024-01-26T12:00:00.210215" level="INFO">Repeating keyword, round 1/1.</msg>
+<kw name="Add Object Into Json File" owner="jsonPage">
+<kw name="Random Number" owner="FakerLibrary">
+<msg time="2024-01-26T12:00:00.211214" level="INFO">${DICTID} = 7</msg>
+<var>${DICTID}</var>
+<arg>digits=1</arg>
+<doc>Generate a random integer according to the following rules:</doc>
+<status status="PASS" start="2024-01-26T12:00:00.210215" elapsed="0.000999"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T12:00:00.237934" level="INFO">${transactionId} = 7324</msg>
+<var>${transactionId}</var>
+<arg>xpath://table[@id = '_ctl0__ctl0_Content_Main_MyTransactions']/tbody/tr[2]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.211214" elapsed="0.026720"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T12:00:00.258906" level="INFO">${transactionTime} = 2024-01-26 08:59</msg>
+<var>${transactionTime}</var>
+<arg>xpath://table[@id = '_ctl0__ctl0_Content_Main_MyTransactions']/tbody/tr[2]/td[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.237934" elapsed="0.020972"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-26T12:00:00.271059" level="INFO">${amount} = $6715689.00</msg>
+<var>${amount}</var>
+<arg>xpath://table[@id = '_ctl0__ctl0_Content_Main_MyTransactions']/tbody/tr[2]/td[5]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.259905" elapsed="0.011154"/>
+</kw>
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-01-26T12:00:00.271059" level="INFO">${File} = {'Transaction8': {'transactionID': '7304', 'transaction_time': '2024-01-26 08:28', 'amount': '$8.00'}, 'Transaction5': {'transactionID': '7322', 'transaction_time': '2024-01-26 08:59', 'amount': '$710...</msg>
+<var>${File}</var>
+<arg>C:\\Users\\Mallu\\Documents\\Projetos\\Blip\\projeto_automation_blip\\json${/}newtransactiondata.Json</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.271059" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-01-26T12:00:00.271059" level="INFO">${dict} = {'transactionID': '7324', 'transaction_time': '2024-01-26 08:59', 'amount': '$6715689.00'}</msg>
+<var>${dict}</var>
+<arg>transactionID=${transactionId}</arg>
+<arg>transaction_time=${transactionTime}</arg>
+<arg>amount=${amount}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.271059" elapsed="0.000000"/>
+</kw>
+<kw name="Add Object To Json" owner="JSONLibrary">
+<msg time="2024-01-26T12:00:00.320795" level="INFO">${json} = {'Transaction8': {'transactionID': '7304', 'transaction_time': '2024-01-26 08:28', 'amount': '$8.00'}, 'Transaction5': {'transactionID': '7322', 'transaction_time': '2024-01-26 08:59', 'amount': '$710...</msg>
+<var>${json}</var>
+<arg>${File}</arg>
+<arg>$.Transaction${DICTID}</arg>
+<arg>${dict}</arg>
+<doc>Add an dictionary or list object to json object using json_path</doc>
+<status status="PASS" start="2024-01-26T12:00:00.271059" elapsed="0.049736"/>
+</kw>
+<kw name="Dump Json To File" owner="JSONLibrary">
+<arg>C:\\Users\\Mallu\\Documents\\Projetos\\Blip\\projeto_automation_blip\\json${/}newtransactiondata.Json</arg>
+<arg>${json}</arg>
+<doc>Dump JSON to file</doc>
+<status status="PASS" start="2024-01-26T12:00:00.320795" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T12:00:00.210215" elapsed="0.110580"/>
+</kw>
+<arg>1</arg>
+<arg>Add Object Into Json File</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.209216" elapsed="0.111579"/>
+</kw>
+<status status="PASS" start="2024-01-26T11:59:58.919413" elapsed="1.401382"/>
+</kw>
+<kw name="Close Site" owner="Commons" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-26T12:00:00.320795" elapsed="2.379273"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-26T12:00:02.700068" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-26T12:00:02.700068" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-26T12:00:00.320795" elapsed="2.379273"/>
+</kw>
+<doc>Este teste valida que a cada nova transação os dados 'Transaction ID', 'Transaction Time' e 'Amount'
+serão incrementados a um arquivo JSON para controle de transações</doc>
+<tag>arquivamento</tag>
+<tag>validação</tag>
+<status status="PASS" start="2024-01-26T11:59:53.107049" elapsed="9.593019"/>
+</test>
+<doc>Sendo um usuário já cadastrado e com uma conta criada
+Quero acessar o site do meu banco
+Para que eu possa fazer novas transferencias e gerenciar minhas movimentações</doc>
+<status status="PASS" start="2024-01-26T11:59:20.685128" elapsed="42.014940"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">arquivamento</stat>
+<stat pass="2" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">transferencia</stat>
+<stat pass="2" fail="0" skip="0">validação</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="bank Transfer">bank Transfer</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

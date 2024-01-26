@@ -1,0 +1,5 @@
+TRANFER_OPTION = "//a[contains(.,'Transfer Funds')]"
+IMPUT_AMOUNT = "//input[contains(@name,'transferAmount')]"
+CHECKBOX_TO_ACCOUNT = "//select[contains(@name,'toAccount')]"
+TRNSFER_MONEY_BTN = "//input[@name='transfer']"
+OPTION_TO_ACCOUNT = "(//option[@value='800003'][contains(.,'800003 Checking')])[2]"

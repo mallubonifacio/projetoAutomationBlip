@@ -1,0 +1,1 @@
+VIEW_TRANSACTIONS_BTN = "//a[contains(.,'View Recent Transactions')]"
